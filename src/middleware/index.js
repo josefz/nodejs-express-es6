@@ -8,6 +8,7 @@ export function setupMiddleware(app, config) {
         exposedHeaders: config.corsHeaders
     }));
 
+    //body parser
     app.use(bodyParser.json());
 
     //Avoid stacktrace leaked in responses.
