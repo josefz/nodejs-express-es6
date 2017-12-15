@@ -1,7 +1,11 @@
 import bodyParser from "body-parser";
 import cors from "cors";
+import morgan from 'morgan';
 
 export function setupMiddleware(app, config) {
+
+    // logger
+    app.use(morgan('dev'));
 
     // 3rd party middleware
     app.use(cors({

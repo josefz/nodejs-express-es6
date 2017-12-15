@@ -4,17 +4,15 @@
 
 import { Router } from 'express';
 
-export default () => {
-    let router = Router();
+let router = Router();
 
-    router.use( ( req, res, next ) => {
-        //middleware that is specific to this endpoint
-        next();
-    } );
+router.use( ( req, res, next ) => {
+    //middleware that is specific to this endpoint
+    next();
+} );
 
-    router.get( '/', function ( req, res ) {
-        res.sendStatus( 200 );
-    } );
+router.get( '/', function ( req, res ) {
+    res.sendStatus( 200 );
+} );
 
-    return router;
-}
+export default router;
